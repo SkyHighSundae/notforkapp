@@ -17,10 +17,11 @@ class MainWindow(Gtk.Window):
         self.set_border_width(10)
         self.set_default_size(400, 200)
 
-        # Create a TextView to display content
+        # Create a TextView for displaying content
         self.textview = Gtk.TextView()
+        self.textview.set_editable(False)  # Make the TextView not editable
         self.textbuffer = self.textview.get_buffer()
-        self.textbuffer.set_text("Not fork is a forkie in collabvm. he keeps rm - rf ing vms. he got banned from lubuntuvm by guest24897")
+        self.textbuffer.set_text("Not fork is a forkie in collabvm. He keeps rm - rf ing vms. He got banned from lubuntuvm by guest24897")
 
         # Scrollable window for the TextView
         scrollable_tview = Gtk.ScrolledWindow()
